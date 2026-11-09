@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtualenv
+.venv/
+venv/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime artifacts（数据库、trace、运行产物）
+*.sqlite
+*.db
+runs/
+traces/
+tmp/
+
+# Secrets — 永不提交 API Key / Token
+.env
+.env.*
+*.key
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
