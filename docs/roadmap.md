@@ -1,6 +1,8 @@
-# Roadmap — 九关冒险地图
+# Season 2 · Agent Engineering — 九关工程实战路线
 
 > 每关一个真实的工程能力跃迁。一次只引入当前需要的复杂度。
+>
+> 分季说明:Season 1([content/season-1/](../content/season-1/README.md))负责原理理解,本路线(Season 2)负责工程实现。
 
 ## 冒险地图
 
@@ -20,7 +22,7 @@
 
 ## 当前主线
 
-**Level 0 — ⚡ 智能觉醒**：为 Mini Agent 打造第一套工具系统。
+**S2-L0 — ⚡ 智能觉醒**:为 Mini Agent 打造第一套工具系统。
 
 ## 路线原则
 
