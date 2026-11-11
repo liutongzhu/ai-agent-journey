@@ -6,7 +6,7 @@
 
 | # | 成就 | 关卡 | 解锁条件 | 状态 |
 |---|---|---|---|---|
-| 0 | **First Contact** — 第一次工具调用 | ⚡ 智能觉醒 | Level 0 工程通关 | 🔒 |
+| 0 | **First Contact** — 第一次工具调用 | ⚡ 智能觉醒 | Level 0 工程通关 | 🛡️ Builder（2026-11-11，证据：`pytest` 109 passed/1 skipped、Boss 10 passed、Demo 运行记录见 [level-0.md](levels/level-0.md) Run 节、tag `v0.1.0`） |
 | 1 | **Awakened Mind** — 自主行动 | 🧠 自主意识 | Level 1 工程通关 | 🔒 |
 | 2 | **Code Smith** — 代码工匠 | 🛠️ 代码工匠 | Level 2 工程通关 | 🔒 |
 | 3 | **Guardian** — 安全守护者 | 🛡️ 安全堡垒 | Level 3 工程通关 | 🔒 |

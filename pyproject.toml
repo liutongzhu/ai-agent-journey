@@ -13,6 +13,13 @@ dependencies = []
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 
+# flat-layout 下显式列出 Python 包,避免 setuptools 误吞 content/、docs/ 等目录
+[tool.setuptools]
+packages = ["agent", "tools", "runtime", "sandbox", "orchestration", "examples"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "live: 真实 API 集成用例(需 ANTHROPIC_API_KEY,未设置时 skip)",
+]

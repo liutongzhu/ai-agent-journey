@@ -6,7 +6,7 @@
 
 | Demo | 对应关卡 | 状态 |
 |---|---|---|
-| `level0_echo_demo.py` — 第一次工具调用（Mock LLM → ToolCall → echo） | Level 0 | 未实现 |
+| `level0_echo_demo.py` — 第一次工具调用（Mock LLM → ToolCall → echo） | Level 0 | ✅ 已实现（2026-11-11，mock 模式运行通过；`--live` 需 `ANTHROPIC_API_KEY`） |
 | `level1_agent_loop_demo.py` — Agent Loop 多步执行（mock / live 两种模式） | Level 1 | 未实现 |
 | `level2_bugfix_demo.py` — 教学工作区内修复 Bug 并跑测试 | Level 2 | 未实现 |
 | `level3_sandbox_demo.py` — Sandbox 隔离、超时与 Fail Closed 演示 | Level 3 | 未实现 |

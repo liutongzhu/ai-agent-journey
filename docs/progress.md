@@ -1,6 +1,6 @@
 # Progress — 进度系统
 
-> 最后更新:2026-11-10(Season 1 前三篇提纲完成;工程线仍处于初始化状态,未开始任何关卡)
+> 最后更新:2026-11-11(S2-L0 工程通关,成就 First Contact / Builder;Season 1 前三篇提纲完成未发布)
 
 ## 三线进度定义
 
@@ -24,7 +24,7 @@
 |---|---|
 | Learning | Level 0 / Level 1 原理已讨论(待复习);其余未开始 |
 | Content | EP00、Level 0、Level 1 提纲完成,均未发布 |
-| Engineering | 0 / 9 关,工程初始化完成,全部关卡未开始 |
+| Engineering | 1 / 9 关(S2-L0 工程通关,2026-11-11) |
 
 ## Learning Progress(学习进度)
 
@@ -55,11 +55,11 @@
 |---|---|
 | Player | Agent Architect |
 | Player Level | 0 |
-| Completed Levels | 0 / 9 |
-| Total XP | 0 |
-| Current Quest | S2-L0 — ⚡ 智能觉醒 |
-| Unlocked Skills | None |
-| Achievements | None |
+| Completed Levels | 1 / 9 |
+| Total XP | 80 |
+| Current Quest | S2-L1 — 🧠 自主意识 |
+| Unlocked Skills | Tool Calling(S2-L0) |
+| Achievements | First Contact(🛡️ Builder,S2-L0) |
 
 ### XP 规则(每关上限 100)
 
@@ -75,7 +75,7 @@
 
 | Level | 工程通关 | 个人掌握 | XP | 成就等级 | Milestone Tag |
 |---|---|---|---:|---|---|
-| S2-L0 ⚡ 智能觉醒 | 未开始 | 未开始 | 0 | — | — |
+| S2-L0 ⚡ 智能觉醒 | ✅ 2026-11-11(Demo + 测试 + Boss + 提交) | 未开始 | 80 | 🛡️ Builder | `v0.1.0` |
 | S2-L1 🧠 自主意识 | 未开始 | 未开始 | 0 | — | — |
 | S2-L2 🛠️ 代码工匠 | 未开始 | 未开始 | 0 | — | — |
 | S2-L3 🛡️ 安全堡垒 | 未开始 | 未开始 | 0 | — | — |

@@ -48,7 +48,7 @@ Mini Agent 刚刚诞生——它能接收指令,却无法触碰外部世界。�
 
 | 编号 | 关卡 | 技术主题 | 解锁能力 | Milestone | 状态 |
 |---|---|---|---|---|---|
-| S2-L0 | ⚡ 智能觉醒 | Minimal Agent Harness | Tool Calling | `v0.1.0` | 🔒 |
+| S2-L0 | ⚡ 智能觉醒 | Minimal Agent Harness | Tool Calling | `v0.1.0` | 🛡️ |
 | S2-L1 | 🧠 自主意识 | Agent Loop | Autonomous Multi-step Execution | `v0.2.0` | 🔒 |
 | S2-L2 | 🛠️ 代码工匠 | Mini Coding Agent | Code Editing | `v0.3.0` | 🔒 |
 | S2-L3 | 🛡️ 安全堡垒 | Linux Sandbox Executor | Sandboxed Execution | `v0.4.0` | 🔒 |
@@ -84,7 +84,7 @@ flowchart TB
 | 里程碑 | 内容 | 证据 |
 |---|---|---|
 | 工程初始化 | 目录结构、任务书、进度与成就系统(commit `93b78c7`) | [docs](docs/) |
-| Level 0 — v0.1.0 | 未开始 | — |
+| Level 0 — v0.1.0(2026-11-11) | ToolCall 协议、Schema 校验、白名单 Registry、Dispatcher、权限模型、脱敏 Trace、echo / read_file 工具、单轮 Harness、Mock + Anthropic 双客户端 | `pytest` 109 passed / 1 skipped(未运行的 live 用例)、`pytest tests/boss` 10 passed、[Demo 运行记录](docs/levels/level-0.md)、tag `v0.1.0` |
 
 ### 成就系统
 

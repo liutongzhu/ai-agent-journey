@@ -8,7 +8,7 @@
 
 | # | 关卡 | 技术主题 | 解锁能力 | Milestone | 状态 | 任务书 |
 |---|---|---|---|---|---|---|
-| 0 | ⚡ 智能觉醒 | Minimal Agent Harness | Tool Calling | `v0.1.0` | 🔒 未开始 | [level-0.md](levels/level-0.md) |
+| 0 | ⚡ 智能觉醒 | Minimal Agent Harness | Tool Calling | `v0.1.0` | 🛡️ Builder | [level-0.md](levels/level-0.md) |
 | 1 | 🧠 自主意识 | Agent Loop | Autonomous Multi-step Execution | `v0.2.0` | 🔒 未开始 | [level-1.md](levels/level-1.md) |
 | 2 | 🛠️ 代码工匠 | Mini Coding Agent | Code Editing | `v0.3.0` | 🔒 未开始 | [level-2.md](levels/level-2.md) |
 | 3 | 🛡️ 安全堡垒 | Linux Sandbox Executor | Sandboxed Execution | `v0.4.0` | 🔒 未开始 | [level-3.md](levels/level-3.md) |
@@ -22,7 +22,9 @@
 
 ## 当前主线
 
-**S2-L0 — ⚡ 智能觉醒**:为 Mini Agent 打造第一套工具系统。
+**S2-L1 — 🧠 自主意识**:让 Agent 学会连续行动(Agent Loop)。
+
+> S2-L0 已于 2026-11-11 工程通关(🛡️ Builder,tag `v0.1.0`),运行记录见 [levels/level-0.md](levels/level-0.md)。
 
 ## 路线原则
 
