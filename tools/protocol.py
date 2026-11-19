@@ -147,7 +147,7 @@ def parse_tool_call(raw: str | bytes | Mapping) -> ToolCall:
             ErrorCode.INVALID_CALL, f"missing envelope fields: {sorted(missing)}"
         )
 
-    if envelope["protocol_version"] != PROTOCOL_VERSION:
+    if type(envelope["protocol_version"]) is not int or envelope["protocol_version"] != PROTOCOL_VERSION:
         raise ToolCallRejected(
             ErrorCode.UNSUPPORTED_VERSION,
             f"expected protocol_version={PROTOCOL_VERSION!r}, got {envelope['protocol_version']!r}",
