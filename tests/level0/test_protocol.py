@@ -75,6 +75,12 @@ class TestParseToolCall:
             parse_tool_call(make_envelope(protocol_version="1"))
         assert excinfo.value.code == ErrorCode.UNSUPPORTED_VERSION
 
+    @pytest.mark.parametrize("bad_version", [True, False, 1.0, None, "1"])
+    def test_protocol_version_requires_exact_integer(self, bad_version):
+        with pytest.raises(ToolCallRejected) as excinfo:
+            parse_tool_call(make_envelope(protocol_version=bad_version))
+        assert excinfo.value.code == ErrorCode.UNSUPPORTED_VERSION
+
     @pytest.mark.parametrize("kwargs", [
         {"call_id": ""},
         {"call_id": 7},
