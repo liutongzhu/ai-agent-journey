@@ -140,9 +140,10 @@ class Dispatcher:
             # Level 0 的超时只是放弃等待,不终止线程;真正的执行隔离在 Level 3。
             return self._reject(call, ErrorCode.TIMEOUT,
                                 f"execution exceeded {self._timeout_seconds}s", started)
-        except Exception as exc:
+        except Exception:
+            # 不把未知工具异常中的路径、参数或密钥暴露给模型/调用方。
             return self._reject(call, ErrorCode.TOOL_ERROR,
-                                f"{type(exc).__name__}: {exc}"[:300], started)
+                                "tool execution failed", started)
 
         duration_ms = int((time.perf_counter() - started) * 1000)
         self._emit("tool_executed", call_id=call.call_id, tool=call.name,
