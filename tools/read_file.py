@@ -46,7 +46,8 @@ class ReadFileTool(Tool):
         raw = arguments["path"]
         resolved = self._resolve_in_workspace(raw)
         try:
-            data = resolved.read_bytes()
+            with resolved.open("rb") as stream:
+                data = stream.read(self._max_bytes + 1)
         except OSError as exc:
             raise ToolExecutionFailure(ErrorCode.TOOL_ERROR, f"cannot read file: {exc}") from exc
         if len(data) > self._max_bytes:
