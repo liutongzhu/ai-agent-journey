@@ -145,8 +145,9 @@ def test_unexpected_exception_becomes_structured_error():
     with make_dispatcher(registry) as dispatcher:
         result = dispatcher.execute(ToolCall("c9", "explode", {"x": "y"}))
     assert result.error.code == ErrorCode.TOOL_ERROR
-    assert "ValueError" in result.error.message
-    assert "boom" in result.error.message
+    assert result.error.message == "tool execution failed"
+    assert "ValueError" not in result.feedback_text()
+    assert "boom" not in result.feedback_text()
 
 
 def test_timeout_returns_structured_error():
@@ -178,3 +179,17 @@ def test_trace_does_not_record_argument_values(registry):
         dispatcher.execute(ToolCall("c13", "echo", {"text": secret}))
     rendered = json.dumps(trace.events)
     assert secret not in rendered
+
+
+def test_read_file_rejects_oversized_content(tmp_path):
+    """Oversized files must be rejected, rather than returned to the model."""
+    (tmp_path / "large.txt").write_bytes(b"x" * 100_000)
+    tool = ReadFileTool(tmp_path, max_bytes=64)
+    with pytest.raises(ToolExecutionFailure) as excinfo:
+        tool.execute({"path": "large.txt"})
+    assert excinfo.value.code == "content_too_large"
+
+
+def test_read_file_accepts_exact_limit(tmp_path):
+    (tmp_path / "exact.txt").write_bytes(b"x" * 64)
+    assert ReadFileTool(tmp_path, max_bytes=64).execute({"path": "exact.txt"}) == "x" * 64
